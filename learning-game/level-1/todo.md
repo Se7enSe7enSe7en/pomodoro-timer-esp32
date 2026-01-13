@@ -1,10 +1,20 @@
-# Level 1 Learning Checklist: Concepts for a Pomodoro Timer
+# Level 1: Learning Tasks (Unconscious Incompetence -> Conscious Incompetence)
 
-- [x] **Concept**: Non-blocking Timing (Blink Without Delay)
-  - [x] Understand why `delay()` is bad for interactive programs.
-    - [x] Learn how `millis()` works.
-- [x] **Concept**: Finite State Machines (FSM)
-  - [x] Learn what an FSM is.
-  - [x] Identify the states of a Pomodoro Timer.
-- [x] **Concept**: Input Handling
-  - [x] Learn about button debouncing (hardware vs software).
+## Objectives
+
+- Understand the hardware constraints and interfaces.
+- Design the software architecture (FSM) without writing code.
+- Select appropriate libraries.
+
+## Tasks
+
+- [x] **Hardware Research**: Identify the communication interface for the GC9503V display on the Panlee board (SPI, I2S, RGB, or I8080?).
+- [x] **Input Research**: How does this board handle user input? (Touch screen controller type? Native buttons?)
+- [x] **Graphics Library**: Research "LVGL on ESP32". Why is it the standard? What alternatives exist?
+- [x] **Timing**: Compare "FreeRTOS Software Timers" vs "ESP32 Hardware Timers". Which is suitable for a minute-resolution countdown?
+- [x] **State Machine**: Draft a state diagram for the Pomodoro timer (IDLE -> WORK -> PAUSE, etc.).
+  - IDLE + Start -> WORK
+  - WORK + Pause -> PAUSE
+  - PAUSE + Resume -> WORK
+  - WORK + Timer Expired -> DONE
+  - DONE + Reset -> IDLE

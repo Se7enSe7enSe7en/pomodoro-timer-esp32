@@ -1,7 +1,16 @@
-# Level 2: Implementation & Refining (The Clean Coder's Checklist)
+# Level 2 Tasks (Conscious Incompetence -> Conscious Competence)
 
-- [ ] **Skeleton**: Create the basic file structure with `setup()` and `loop()`.
-- [ ] **State Machine**: Implement the `switch(state)` logic.
-- [ ] **Timer**: Implement the `millis()` countdown logic (no `delay()`).
-- [ ] **Input**: Implement the debounced button reading.
-- [ ] **Integration**: Connect the button to the state machine (Press -> Start).
+## Objectives
+
+- Implement the system incrementally.
+- Write clean, modular C code.
+- follow "The Clean Coder's Checklist".
+
+## Tasks
+
+- [ ] **Project Skeleton**: Initialize a clean ESP-IDF project structure. <!-- id: 0 -->
+- [ ] **Component: Display**: Create the `drivers/display` component and initialize LVGL (just a blank screen or label). <!-- id: 1 -->
+- [ ] **Component: Input**: Create the `drivers/input` component for the touch driver. <!-- id: 2 -->
+- [ ] **Component: Timer**: Create the `system/timer` component using FreeRTOS Software Timers. <!-- id: 3 -->
+- [ ] **Component: FSM**: Implement the State Machine logic in `logic/fsm`. <!-- id: 4 -->
+- [ ] **Integration**: Wire everything together in `main.c`. <!-- id: 5 -->

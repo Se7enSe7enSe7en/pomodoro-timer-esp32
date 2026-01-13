@@ -1,19 +1,27 @@
-# Refactoring Maxims
+# Level 2: Improvements & Maxims
 
-## 1. Magic Numbers
+## The Clean Coder's Checklist (ESP32 Edition)
 
-- **Bad**: `if (millis() - last_time > 1000)`
-- **Good**: `const unsigned long ONE_SECOND = 1000;` ...
-- **Why**: 6 months from now, you won't remember what "1000" means.
+### 1. Separation of Concerns
 
-## 2. Single Responsibility Principle (SRP)
+- **Maxim**: "A component should know HOW to do a job, but not WHEN to do it."
+- **Check**: Does your display driver know about "Pomodoro"? (It shouldn't. It should only know about "Pixels" or "Widgets").
 
-- **Bad**: A `loop()` function that is 100 lines long and handles buttons, LEDs, and timing.
-- **Good**: `checkButtons()`, `updateTimer()`, `updateDisplay()`.
-- **Why**: If the button breaks, you know exactly where to look.
+### 2. No Magic Numbers
 
-## 3. Variable Scope
+- **Maxim**: "Give every constant a name."
+- **Check**: Are you using `1000` for a delay? Define `#define TICK_PERIOD_MS 1000`.
 
-- **Bad**: Global variables for everything.
-- **Good**: `static` variables inside functions, or variables passed as arguments.
-- **Why**: Keeps your program state clean and predictable.
+### 3. Error Handling
+
+- **Maxim**: "Assume everything will fail."
+- **Check**: Did you check the return code of `esp_timer_create`? What if `malloc` returns NULL?
+
+### 4. Global State
+
+- **Maxim**: "Globals are guilty until proven innocent."
+- **Check**: Can this variable be `static` inside the function? Can it be passed as a struct pointer?
+
+## Log of Critiques
+
+_(This section will be populated as you write code)_
