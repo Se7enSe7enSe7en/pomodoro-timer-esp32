@@ -67,6 +67,7 @@
 /Users/jeddenanthonymendoza/projects/pomodoro-timer-esp32/pomodoro-timer/build/esp-idf/esp_http_server/libesp_http_server.a
 /Users/jeddenanthonymendoza/projects/pomodoro-timer-esp32/pomodoro-timer/build/esp-idf/esp_https_ota/libesp_https_ota.a
 /Users/jeddenanthonymendoza/projects/pomodoro-timer-esp32/pomodoro-timer/build/esp-idf/esp_https_server/libesp_https_server.a
+/Users/jeddenanthonymendoza/projects/pomodoro-timer-esp32/pomodoro-timer/build/esp-idf/esp_psram/libesp_psram.a
 /Users/jeddenanthonymendoza/projects/pomodoro-timer-esp32/pomodoro-timer/build/esp-idf/esp_lcd/libesp_lcd.a
 /Users/jeddenanthonymendoza/projects/pomodoro-timer-esp32/pomodoro-timer/build/esp-idf/protobuf-c/libprotobuf-c.a
 /Users/jeddenanthonymendoza/projects/pomodoro-timer-esp32/pomodoro-timer/build/esp-idf/protocomm/libprotocomm.a

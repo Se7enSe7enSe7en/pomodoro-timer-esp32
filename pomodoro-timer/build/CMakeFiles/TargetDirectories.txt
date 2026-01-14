@@ -693,6 +693,7 @@
 /Users/jeddenanthonymendoza/projects/pomodoro-timer-esp32/pomodoro-timer/build/esp-idf/esp_https_server/CMakeFiles/install.dir
 /Users/jeddenanthonymendoza/projects/pomodoro-timer-esp32/pomodoro-timer/build/esp-idf/esp_https_server/CMakeFiles/install/local.dir
 /Users/jeddenanthonymendoza/projects/pomodoro-timer-esp32/pomodoro-timer/build/esp-idf/esp_https_server/CMakeFiles/install/strip.dir
+/Users/jeddenanthonymendoza/projects/pomodoro-timer-esp32/pomodoro-timer/build/esp-idf/esp_psram/CMakeFiles/__idf_esp_psram.dir
 /Users/jeddenanthonymendoza/projects/pomodoro-timer-esp32/pomodoro-timer/build/esp-idf/esp_psram/CMakeFiles/edit_cache.dir
 /Users/jeddenanthonymendoza/projects/pomodoro-timer-esp32/pomodoro-timer/build/esp-idf/esp_psram/CMakeFiles/rebuild_cache.dir
 /Users/jeddenanthonymendoza/projects/pomodoro-timer-esp32/pomodoro-timer/build/esp-idf/esp_psram/CMakeFiles/list_install_components.dir
