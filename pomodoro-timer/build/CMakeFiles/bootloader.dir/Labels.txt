@@ -1,0 +1,13 @@
+# Target labels
+ bootloader
+# Source files and their labels
+/Users/jeddenanthonymendoza/projects/pomodoro-timer-esp32/pomodoro-timer/build/CMakeFiles/bootloader
+/Users/jeddenanthonymendoza/projects/pomodoro-timer-esp32/pomodoro-timer/build/CMakeFiles/bootloader.rule
+/Users/jeddenanthonymendoza/projects/pomodoro-timer-esp32/pomodoro-timer/build/CMakeFiles/bootloader-complete.rule
+/Users/jeddenanthonymendoza/projects/pomodoro-timer-esp32/pomodoro-timer/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule
+/Users/jeddenanthonymendoza/projects/pomodoro-timer-esp32/pomodoro-timer/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule
+/Users/jeddenanthonymendoza/projects/pomodoro-timer-esp32/pomodoro-timer/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule
+/Users/jeddenanthonymendoza/projects/pomodoro-timer-esp32/pomodoro-timer/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule
+/Users/jeddenanthonymendoza/projects/pomodoro-timer-esp32/pomodoro-timer/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule
+/Users/jeddenanthonymendoza/projects/pomodoro-timer-esp32/pomodoro-timer/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule
+/Users/jeddenanthonymendoza/projects/pomodoro-timer-esp32/pomodoro-timer/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule

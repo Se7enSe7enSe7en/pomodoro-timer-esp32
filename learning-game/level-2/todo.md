@@ -8,7 +8,7 @@
 
 ## Tasks
 
-- [ ] **Project Skeleton**: Initialize a clean ESP-IDF project structure. <!-- id: 0 -->
+- [x] **Project Skeleton**: Initialize a clean ESP-IDF project structure. <!-- id: 0 -->
 - [ ] **Component: Display**: Create the `drivers/display` component and initialize LVGL (just a blank screen or label). <!-- id: 1 -->
 - [ ] **Component: Input**: Create the `drivers/input` component for the touch driver. <!-- id: 2 -->
 - [ ] **Component: Timer**: Create the `system/timer` component using FreeRTOS Software Timers. <!-- id: 3 -->
