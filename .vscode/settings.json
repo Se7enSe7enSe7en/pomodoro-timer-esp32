@@ -1,7 +1,0 @@
-{
-    "idf.pythonInstallPath": "/usr/bin/python3",
-    "cmake.sourceDirectory": "/Users/jeddenanthonymendoza/projects/pomodoro-timer-esp32/pomodoro-timer",
-    "idf.openOcdConfigs": [
-        "board/esp32s3-builtin.cfg"
-    ]
-}
