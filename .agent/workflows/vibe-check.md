@@ -9,6 +9,7 @@ description: Agent will do a quick read to all of current changes by the user an
 3.) when checking here is the priority list:
 3.1.) is it optimal enough? (as long as it doesn't cause huge performance hit)
 3.2.) is it maintainable enough? (it doesn't have to be super maintainable)
-3.3.) is there a better alternative? (if there is, write a commented version of the code below the current code, if it is big refactor, create an .md file document for the plan and explaination in docs/generated/refactor/)
+3.3.) is there a better alternative?
 4.) before checking, read specs/main.md to get more context (eg. tech stack, features) to get the intention for code.
 5.) remove the vibe-check comment if it is resolved
+6.) do not implement any changes, let the user implement it
