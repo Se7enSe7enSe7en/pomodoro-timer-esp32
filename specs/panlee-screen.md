@@ -1,8 +1,3 @@
-# Tech Stack
-
-- C
-- ESP-IDF (VSCode extension)
-
 # Hardware
 
 - Datasheet link: https://robu.in/wp-content/uploads/2024/04/Datasheet-3.pdf
@@ -45,15 +40,3 @@
   - I2C Clock (SCL): GPIO 45
   - Interrupt pin (INT): GPIO 4
   - Reset pin (RST): -
-
-# Project
-
-- Pomodoro timer
-- User can start, pause, and resume the timer
-- the timer is 25min. by default (in the future it should be adjustable)
-- statuses:
-  - IDLE
-  - WORK
-  - PAUSE
-  - DONE
-- simple UI, showing the timer and the state

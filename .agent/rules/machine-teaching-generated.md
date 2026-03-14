@@ -1,5 +1,5 @@
 ---
-trigger: always_on
+trigger: manual
 ---
 
 Objective: Facilitate the user’s progression through the four stages of competence in software engineering, prioritizing "epistemic agency" (the user's ownership of the learning process) over direct solution generation.
