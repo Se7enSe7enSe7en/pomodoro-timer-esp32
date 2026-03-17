@@ -1,44 +1,58 @@
 # Hardware
 
-- Datasheet link: https://github.com/Xinyuan-LilyGO/LilyGo-T-RGB/blob/master/schematic/T-RGB.pdf
-- Documentation: https://lilygo.cc/products/t-rgb?_pos=1&_psq=t-rgb&_ss=e&_v=1.0
+- Datasheet link: https://github.com/Xinyuan-LilyGO/LilyGo-T-RGB/blob/main/datasheet/ST7701S_SPEC_%20V1.1.pdf
+- Schematic link: https://github.com/Xinyuan-LilyGO/LilyGo-T-RGB/blob/master/schematic/T-RGB.pdf
+- Documentation: https://github.com/Xinyuan-LilyGO/LilyGo-T-RGB/blob/main/README.md
+- Product link: https://lilygo.cc/products/t-rgb?_pos=1&_psq=t-rgb&_ss=e&_v=1.0
+- ESP-IDF Sample repo: https://github.com/Xinyuan-LilyGO/LilyGo-Display-IDF?tab=readme-ov-file
 - MCU: ESP32-S3R8
-- Display: LilyGo T-RGB 2.1-inch TFT LCD (half-circle or full-circle)
+- Display: LilyGo T-RGB 2.1-inch TFT LCD (full circle)
 - Display Driver: ST7701S
-- Display interface: 3-wire SPI + 18-bit RGB (RGB666 physical bus, RGB565 driven by ESP32-S3)
+- Display interface: 3-wire SPI (via XL9535 expander) + 16-bit RGB (RGB565 driven by ESP32-S3 over 16 data lines; DATA0 and DATA12 are not connected)
 - Display resolution: 480(H)x480(V)
 - Touchscreen type: Capacitive touch
-- Drive IC model: FT3267 (2.1-inch half-circle) / CST820 (2.1-inch full-circle)
+- Touch IC: CST820 (2.1-inch full-circle)
 
 ## Pin Mapping
 
-- LCD_BL (LCD backlight control, high level enable): GPIO 46
-- RGB Interface (D0-D17):
-	- D0: GPIO 44
-	- D1: GPIO 21
-	- D2: GPIO 18
-	- D3: GPIO 17
-	- D4: GPIO 16
-	- D5: GPIO 15
-	- D6: GPIO 14
-	- D7: GPIO 13
-	- D8: GPIO 12
-	- D9: GPIO 11
-	- D10: GPIO 10
-	- D11: GPIO 9
-	- D12: GPIO 43
-	- D13: GPIO 7
-	- D14: GPIO 6
-	- D15: GPIO 5
-	- D16: GPIO 3
-	- D17: GPIO 2
+- LCD_BK (LCD backlight control, high level enable): GPIO 46
+- RGB Data Interface (LCD_DATA1–LCD_DATA17; DATA0/GPIO44 and DATA12/GPIO43 not connected):
+	- LCD_DATA1: GPIO 21
+	- LCD_DATA2: GPIO 18
+	- LCD_DATA3: GPIO 17
+	- LCD_DATA4: GPIO 16
+	- LCD_DATA5: GPIO 15
+	- LCD_DATA6: GPIO 14
+	- LCD_DATA7: GPIO 13
+	- LCD_DATA8: GPIO 12
+	- LCD_DATA9: GPIO 11
+	- LCD_DATA10: GPIO 10
+	- LCD_DATA11: GPIO 9
+	- LCD_DATA13: GPIO 7
+	- LCD_DATA14: GPIO 6
+	- LCD_DATA15: GPIO 5
+	- LCD_DATA16: GPIO 3
+	- LCD_DATA17: GPIO 2
 - RGB Control Signals:
 	- VSYNC: GPIO 41
 	- HSYNC: GPIO 47
 	- DE (Data Enable): GPIO 45
 	- PCLK (Pixel Clock): GPIO 42
-- Touchscreen (I2C):
-	- I2C Data (SDA): GPIO 8
-	- I2C Clock (SCL): GPIO 48
-	- Interrupt pin (INT): GPIO 1
-	- Reset pin (RST): XL9555 IO1 (I2C GPIO expander, not direct ESP32 GPIO)
+- Touchscreen CST820 (I2C):
+	- SDA: GPIO 8
+	- SCL: GPIO 48
+	- INT: GPIO 1
+	- RST: XL9535 IO01 (TP_RES, via I2C GPIO expander)
+- XL9535 I2C GPIO Expander (handles 3-wire SPI init signals and misc):
+	- IO01: TP_RES (touch panel reset)
+	- IO02: PWR_EN
+	- IO03: LCD_CS (SPI chip select for ST7701S init)
+	- IO04: LCD_SDA (SPI MOSI for ST7701S init)
+	- IO05: LCD_CLK (SPI clock for ST7701S init)
+	- IO06: LCD_RST (display reset)
+	- IO07: SD_CS (SD card chip select)
+- SD Card:
+	- SD_CLK: GPIO 39
+	- SD_CMD: GPIO 40
+	- SD_D0: GPIO 38
+- Battery voltage detection: GPIO 4
